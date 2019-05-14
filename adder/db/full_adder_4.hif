@@ -1,0 +1,165 @@
+Version 9.0 Build 132 02/25/2009 SJ Full Version
+42
+3017
+OFF
+OFF
+OFF
+ON
+ON
+OFF
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+half_adder_1
+# storage
+db|full_adder_4.(1).cnf
+db|full_adder_4.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+half_adder_1.vhd
+7064dc26fdfa456bba8ac88a1f92b48
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+full_adder_1:adder0|half_adder_1:adder
+full_adder_1:adder1|half_adder_1:adder
+full_adder_1:adder2|half_adder_1:adder
+full_adder_1:adder3|half_adder_1:adder
+}
+# lmf
+..|..|..|develop|altera|90|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+half_adder_1
+# storage
+db|full_adder_4.(3).cnf
+db|full_adder_4.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+half_adder_1.vhd
+7064dc26fdfa456bba8ac88a1f92b48
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# lmf
+..|..|..|develop|altera|90|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+full_adder_1
+# storage
+db|full_adder_4.(2).cnf
+db|full_adder_4.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+full_adder_1.vhd
+958910de1a397cb946d3f2db39886182
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+full_adder_1:adder0
+full_adder_1:adder1
+full_adder_1:adder2
+full_adder_1:adder3
+}
+# lmf
+..|..|..|develop|altera|90|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+full_adder_4
+# storage
+db|full_adder_4.(0).cnf
+db|full_adder_4.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+full_adder_4.vhd
+c166c57bdcd974c1ae8107972991658
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# include_file {
+sys.vhd
+fe1f496d7a55f15341f4a3192897a
+ripple.vhd
+1eb225a2ebdb453eb494dd5b293e3c70
+carry.vhd
+23fd2ed5b5e4a87eab1e11f3e6d2de82
+}
+# hierarchies {
+|
+}
+# lmf
+..|..|..|develop|altera|90|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# complete
+

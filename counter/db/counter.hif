@@ -1,0 +1,174 @@
+Version 9.0 Build 132 02/25/2009 SJ Full Version
+42
+3017
+OFF
+OFF
+OFF
+ON
+ON
+OFF
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+d_ff
+# storage
+db|counter.(2).cnf
+db|counter.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+d_ff.vhd
+f76fafa4649b11b3afb3874ec8cceacb
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+counter_dec:dec_0|d_ff:bit_0_ff
+counter_dec:dec_0|d_ff:bit_1_ff
+counter_dec:dec_0|d_ff:bit_2_ff
+counter_dec:dec_0|d_ff:bit_3_ff
+counter_dec:dec_0|d_ff:carry_ff
+counter_dec:dec_1|d_ff:bit_0_ff
+counter_dec:dec_1|d_ff:bit_1_ff
+counter_dec:dec_1|d_ff:bit_2_ff
+counter_dec:dec_1|d_ff:bit_3_ff
+counter_dec:dec_1|d_ff:carry_ff
+}
+# lmf
+..|..|..|develop|altera|90|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+counter_dec
+# storage
+db|counter.(1).cnf
+db|counter.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+counter_dec.vhd
+5aaa57771b99841fafc557fb4b3ba787
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(val_max)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(q)
+3 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+counter_dec:dec_0
+counter_dec:dec_1
+}
+# lmf
+..|..|..|develop|altera|90|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+transform_clk
+# storage
+db|counter.(3).cnf
+db|counter.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+transform_clk.vhd
+bd514afa672b475be8b8dd378437d6d
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+transform_clk:timer
+}
+# lmf
+..|..|..|develop|altera|90|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+counter
+# storage
+db|counter.(0).cnf
+db|counter.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+counter.vhd
+3cb21942ff76d3b59241ae86436c7b9
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+|
+}
+# lmf
+..|..|..|develop|altera|90|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# complete
+

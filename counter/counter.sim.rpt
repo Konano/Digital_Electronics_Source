@@ -1,0 +1,419 @@
+Simulator report for counter
+Fri May 10 13:43:22 2019
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 2.0 ms       ;
+; Simulation Netlist Size     ; 120 nodes    ;
+; Simulation Coverage         ;      45.24 % ;
+; Total Number of Transitions ; 245086       ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; MAX II       ;
+; Device                      ; EPM240T100C5 ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      45.24 % ;
+; Total nodes checked                                 ; 120          ;
+; Total output ports checked                          ; 168          ;
+; Total output ports with complete 1/0-value coverage ; 76           ;
+; Total output ports with no 1/0-value coverage       ; 90           ;
+; Total output ports with no 1-value coverage         ; 91           ;
+; Total output ports with no 0-value coverage         ; 91           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                        ;
++------------------------------------------------+------------------------------------------------+------------------+
+; Node Name                                      ; Output Port Name                               ; Output Port Type ;
++------------------------------------------------+------------------------------------------------+------------------+
+; |counter|Mux6~0                                ; |counter|Mux6~0                                ; combout          ;
+; |counter|Mux5~0                                ; |counter|Mux5~0                                ; combout          ;
+; |counter|Mux4~0                                ; |counter|Mux4~0                                ; combout          ;
+; |counter|Mux3~0                                ; |counter|Mux3~0                                ; combout          ;
+; |counter|Mux2~0                                ; |counter|Mux2~0                                ; combout          ;
+; |counter|Mux1~0                                ; |counter|Mux1~0                                ; combout          ;
+; |counter|Mux0~0                                ; |counter|Mux0~0                                ; combout          ;
+; |counter|counter_dec:dec_1|d_ff:bit_1_ff|Q_tmp ; |counter|counter_dec:dec_1|d_ff:bit_1_ff|Q_tmp ; regout           ;
+; |counter|counter_dec:dec_1|Equal0~0            ; |counter|counter_dec:dec_1|Equal0~0            ; combout          ;
+; |counter|counter_dec:dec_1|d_ff:bit_0_ff|Q_tmp ; |counter|counter_dec:dec_1|d_ff:bit_0_ff|Q_tmp ; regout           ;
+; |counter|Mux12~0                               ; |counter|Mux12~0                               ; combout          ;
+; |counter|Mux11~0                               ; |counter|Mux11~0                               ; combout          ;
+; |counter|Mux10~0                               ; |counter|Mux10~0                               ; combout          ;
+; |counter|Mux9~0                                ; |counter|Mux9~0                                ; combout          ;
+; |counter|Mux8~0                                ; |counter|Mux8~0                                ; combout          ;
+; |counter|counter_dec:dec_0|d_ff:carry_ff|Q_tmp ; |counter|counter_dec:dec_0|d_ff:carry_ff|Q_tmp ; regout           ;
+; |counter|counter_dec:dec_0|rst_in              ; |counter|counter_dec:dec_0|rst_in              ; combout          ;
+; |counter|counter_dec:dec_1|d_ff:carry_ff|Q_tmp ; |counter|counter_dec:dec_1|d_ff:carry_ff|Q_tmp ; regout           ;
+; |counter|counter_dec:dec_1|rst_in              ; |counter|counter_dec:dec_1|rst_in              ; combout          ;
+; |counter|clk_dec_0                             ; |counter|clk_dec_0                             ; combout          ;
+; |counter|clk_dec_1                             ; |counter|clk_dec_1                             ; combout          ;
+; |counter|transform_clk:timer|Add0~93           ; |counter|transform_clk:timer|Add0~93           ; combout          ;
+; |counter|transform_clk:timer|Add0~93           ; |counter|transform_clk:timer|Add0~94           ; cout             ;
+; |counter|transform_clk:timer|Add0~95           ; |counter|transform_clk:timer|Add0~95           ; combout          ;
+; |counter|transform_clk:timer|Add0~95           ; |counter|transform_clk:timer|Add0~96COUT1_183  ; cout1            ;
+; |counter|transform_clk:timer|Add0~97           ; |counter|transform_clk:timer|Add0~97           ; combout          ;
+; |counter|transform_clk:timer|Add0~97           ; |counter|transform_clk:timer|Add0~98COUT1_185  ; cout1            ;
+; |counter|transform_clk:timer|Add0~99           ; |counter|transform_clk:timer|Add0~99           ; combout          ;
+; |counter|transform_clk:timer|Add0~99           ; |counter|transform_clk:timer|Add0~100COUT1_187 ; cout1            ;
+; |counter|transform_clk:timer|Equal0~0          ; |counter|transform_clk:timer|Equal0~0          ; combout          ;
+; |counter|transform_clk:timer|Add0~101          ; |counter|transform_clk:timer|Add0~101          ; combout          ;
+; |counter|transform_clk:timer|Add0~101          ; |counter|transform_clk:timer|Add0~102          ; cout             ;
+; |counter|transform_clk:timer|Add0~103          ; |counter|transform_clk:timer|Add0~103          ; combout          ;
+; |counter|transform_clk:timer|Add0~103          ; |counter|transform_clk:timer|Add0~104COUT1_189 ; cout1            ;
+; |counter|transform_clk:timer|Add0~105          ; |counter|transform_clk:timer|Add0~105          ; combout          ;
+; |counter|transform_clk:timer|Add0~105          ; |counter|transform_clk:timer|Add0~106          ; cout0            ;
+; |counter|transform_clk:timer|Add0~107          ; |counter|transform_clk:timer|Add0~107          ; combout          ;
+; |counter|transform_clk:timer|Add0~107          ; |counter|transform_clk:timer|Add0~108          ; cout0            ;
+; |counter|transform_clk:timer|Equal0~1          ; |counter|transform_clk:timer|Equal0~1          ; combout          ;
+; |counter|transform_clk:timer|Add0~109          ; |counter|transform_clk:timer|Add0~109          ; combout          ;
+; |counter|transform_clk:timer|Add0~109          ; |counter|transform_clk:timer|Add0~110          ; cout0            ;
+; |counter|transform_clk:timer|Add0~111          ; |counter|transform_clk:timer|Add0~111          ; combout          ;
+; |counter|transform_clk:timer|Add0~111          ; |counter|transform_clk:timer|Add0~112          ; cout0            ;
+; |counter|transform_clk:timer|Add0~113          ; |counter|transform_clk:timer|Add0~113          ; combout          ;
+; |counter|transform_clk:timer|Add0~113          ; |counter|transform_clk:timer|Add0~114          ; cout             ;
+; |counter|transform_clk:timer|Add0~115          ; |counter|transform_clk:timer|Add0~115          ; combout          ;
+; |counter|transform_clk:timer|Equal0~2          ; |counter|transform_clk:timer|Equal0~2          ; combout          ;
+; |counter|transform_clk:timer|Add0~121          ; |counter|transform_clk:timer|Add0~121          ; combout          ;
+; |counter|transform_clk:timer|\main:counter[0]  ; |counter|transform_clk:timer|\main:counter[0]  ; regout           ;
+; |counter|transform_clk:timer|\main:counter[1]  ; |counter|transform_clk:timer|\main:counter[1]  ; regout           ;
+; |counter|transform_clk:timer|\main:counter[2]  ; |counter|transform_clk:timer|\main:counter[2]  ; regout           ;
+; |counter|transform_clk:timer|\main:counter[3]  ; |counter|transform_clk:timer|\main:counter[3]  ; regout           ;
+; |counter|transform_clk:timer|\main:counter[5]  ; |counter|transform_clk:timer|\main:counter[5]  ; regout           ;
+; |counter|transform_clk:timer|\main:counter[4]  ; |counter|transform_clk:timer|\main:counter[4]  ; regout           ;
+; |counter|transform_clk:timer|\main:counter[6]  ; |counter|transform_clk:timer|\main:counter[6]  ; regout           ;
+; |counter|transform_clk:timer|\main:counter[7]  ; |counter|transform_clk:timer|\main:counter[7]  ; regout           ;
+; |counter|transform_clk:timer|\main:counter[8]  ; |counter|transform_clk:timer|\main:counter[8]  ; regout           ;
+; |counter|transform_clk:timer|\main:counter[9]  ; |counter|transform_clk:timer|\main:counter[9]  ; regout           ;
+; |counter|transform_clk:timer|\main:counter[10] ; |counter|transform_clk:timer|\main:counter[10] ; regout           ;
+; |counter|clk                                   ; |counter|clk~corein                            ; combout          ;
+; |counter|mode                                  ; |counter|mode~corein                           ; combout          ;
+; |counter|clk_1m                                ; |counter|clk_1m~corein                         ; combout          ;
+; |counter|dig_0[0]                              ; |counter|dig_0[0]                              ; padio            ;
+; |counter|dig_0[1]                              ; |counter|dig_0[1]                              ; padio            ;
+; |counter|dig_0[2]                              ; |counter|dig_0[2]                              ; padio            ;
+; |counter|dig_0[3]                              ; |counter|dig_0[3]                              ; padio            ;
+; |counter|dig_0[4]                              ; |counter|dig_0[4]                              ; padio            ;
+; |counter|dig_0[5]                              ; |counter|dig_0[5]                              ; padio            ;
+; |counter|dig_0[6]                              ; |counter|dig_0[6]                              ; padio            ;
+; |counter|dig_1[0]                              ; |counter|dig_1[0]                              ; padio            ;
+; |counter|dig_1[1]                              ; |counter|dig_1[1]                              ; padio            ;
+; |counter|dig_1[2]                              ; |counter|dig_1[2]                              ; padio            ;
+; |counter|dig_1[3]                              ; |counter|dig_1[3]                              ; padio            ;
+; |counter|dig_1[4]                              ; |counter|dig_1[4]                              ; padio            ;
+; |counter|dig_1[5]                              ; |counter|dig_1[5]                              ; padio            ;
+; |counter|dig_1[6]                              ; |counter|dig_1[6]                              ; padio            ;
++------------------------------------------------+------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++--------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                           ;
++------------------------------------------------+------------------------------------------------+------------------+
+; Node Name                                      ; Output Port Name                               ; Output Port Type ;
++------------------------------------------------+------------------------------------------------+------------------+
+; |counter|transform_clk:timer|Add0~95           ; |counter|transform_clk:timer|Add0~96           ; cout0            ;
+; |counter|transform_clk:timer|Add0~97           ; |counter|transform_clk:timer|Add0~98           ; cout0            ;
+; |counter|transform_clk:timer|Add0~99           ; |counter|transform_clk:timer|Add0~100          ; cout0            ;
+; |counter|transform_clk:timer|Add0~103          ; |counter|transform_clk:timer|Add0~104          ; cout0            ;
+; |counter|transform_clk:timer|Add0~105          ; |counter|transform_clk:timer|Add0~106COUT1_191 ; cout1            ;
+; |counter|transform_clk:timer|Add0~107          ; |counter|transform_clk:timer|Add0~108COUT1_193 ; cout1            ;
+; |counter|transform_clk:timer|Add0~109          ; |counter|transform_clk:timer|Add0~110COUT1_195 ; cout1            ;
+; |counter|transform_clk:timer|Add0~111          ; |counter|transform_clk:timer|Add0~112COUT1_197 ; cout1            ;
+; |counter|transform_clk:timer|Add0~115          ; |counter|transform_clk:timer|Add0~116          ; cout0            ;
+; |counter|transform_clk:timer|Add0~115          ; |counter|transform_clk:timer|Add0~116COUT1_199 ; cout1            ;
+; |counter|transform_clk:timer|Add0~117          ; |counter|transform_clk:timer|Add0~117          ; combout          ;
+; |counter|transform_clk:timer|Add0~117          ; |counter|transform_clk:timer|Add0~118          ; cout0            ;
+; |counter|transform_clk:timer|Add0~117          ; |counter|transform_clk:timer|Add0~118COUT1_203 ; cout1            ;
+; |counter|transform_clk:timer|Add0~119          ; |counter|transform_clk:timer|Add0~119          ; combout          ;
+; |counter|transform_clk:timer|Add0~119          ; |counter|transform_clk:timer|Add0~120          ; cout             ;
+; |counter|transform_clk:timer|Add0~121          ; |counter|transform_clk:timer|Add0~122          ; cout0            ;
+; |counter|transform_clk:timer|Add0~121          ; |counter|transform_clk:timer|Add0~122COUT1_201 ; cout1            ;
+; |counter|transform_clk:timer|Add0~123          ; |counter|transform_clk:timer|Add0~123          ; combout          ;
+; |counter|transform_clk:timer|Add0~123          ; |counter|transform_clk:timer|Add0~124          ; cout0            ;
+; |counter|transform_clk:timer|Add0~123          ; |counter|transform_clk:timer|Add0~124COUT1_205 ; cout1            ;
+; |counter|transform_clk:timer|Equal0~3          ; |counter|transform_clk:timer|Equal0~3          ; combout          ;
+; |counter|transform_clk:timer|Equal0~4          ; |counter|transform_clk:timer|Equal0~4          ; combout          ;
+; |counter|transform_clk:timer|Add0~125          ; |counter|transform_clk:timer|Add0~125          ; combout          ;
+; |counter|transform_clk:timer|Add0~125          ; |counter|transform_clk:timer|Add0~126          ; cout0            ;
+; |counter|transform_clk:timer|Add0~125          ; |counter|transform_clk:timer|Add0~126COUT1_207 ; cout1            ;
+; |counter|transform_clk:timer|Add0~127          ; |counter|transform_clk:timer|Add0~127          ; combout          ;
+; |counter|transform_clk:timer|Add0~127          ; |counter|transform_clk:timer|Add0~128          ; cout0            ;
+; |counter|transform_clk:timer|Add0~127          ; |counter|transform_clk:timer|Add0~128COUT1_209 ; cout1            ;
+; |counter|transform_clk:timer|Add0~129          ; |counter|transform_clk:timer|Add0~129          ; combout          ;
+; |counter|transform_clk:timer|Add0~129          ; |counter|transform_clk:timer|Add0~130          ; cout0            ;
+; |counter|transform_clk:timer|Add0~129          ; |counter|transform_clk:timer|Add0~130COUT1_211 ; cout1            ;
+; |counter|transform_clk:timer|Add0~131          ; |counter|transform_clk:timer|Add0~131          ; combout          ;
+; |counter|transform_clk:timer|Add0~131          ; |counter|transform_clk:timer|Add0~132          ; cout0            ;
+; |counter|transform_clk:timer|Add0~131          ; |counter|transform_clk:timer|Add0~132COUT1_213 ; cout1            ;
+; |counter|transform_clk:timer|Equal0~5          ; |counter|transform_clk:timer|Equal0~5          ; combout          ;
+; |counter|transform_clk:timer|Add0~133          ; |counter|transform_clk:timer|Add0~133          ; combout          ;
+; |counter|transform_clk:timer|Add0~133          ; |counter|transform_clk:timer|Add0~134          ; cout             ;
+; |counter|transform_clk:timer|Add0~135          ; |counter|transform_clk:timer|Add0~135          ; combout          ;
+; |counter|transform_clk:timer|Add0~135          ; |counter|transform_clk:timer|Add0~136          ; cout0            ;
+; |counter|transform_clk:timer|Add0~135          ; |counter|transform_clk:timer|Add0~136COUT1_215 ; cout1            ;
+; |counter|transform_clk:timer|Add0~137          ; |counter|transform_clk:timer|Add0~137          ; combout          ;
+; |counter|transform_clk:timer|Add0~137          ; |counter|transform_clk:timer|Add0~138          ; cout0            ;
+; |counter|transform_clk:timer|Add0~137          ; |counter|transform_clk:timer|Add0~138COUT1_217 ; cout1            ;
+; |counter|transform_clk:timer|Add0~139          ; |counter|transform_clk:timer|Add0~139          ; combout          ;
+; |counter|transform_clk:timer|Add0~139          ; |counter|transform_clk:timer|Add0~140          ; cout0            ;
+; |counter|transform_clk:timer|Add0~139          ; |counter|transform_clk:timer|Add0~140COUT1_219 ; cout1            ;
+; |counter|transform_clk:timer|Equal0~6          ; |counter|transform_clk:timer|Equal0~6          ; combout          ;
+; |counter|transform_clk:timer|Add0~141          ; |counter|transform_clk:timer|Add0~141          ; combout          ;
+; |counter|transform_clk:timer|Add0~141          ; |counter|transform_clk:timer|Add0~142          ; cout0            ;
+; |counter|transform_clk:timer|Add0~141          ; |counter|transform_clk:timer|Add0~142COUT1_221 ; cout1            ;
+; |counter|transform_clk:timer|Add0~143          ; |counter|transform_clk:timer|Add0~143          ; combout          ;
+; |counter|transform_clk:timer|Add0~143          ; |counter|transform_clk:timer|Add0~144          ; cout             ;
+; |counter|transform_clk:timer|Add0~145          ; |counter|transform_clk:timer|Add0~145          ; combout          ;
+; |counter|transform_clk:timer|Add0~145          ; |counter|transform_clk:timer|Add0~146          ; cout0            ;
+; |counter|transform_clk:timer|Add0~145          ; |counter|transform_clk:timer|Add0~146COUT1_223 ; cout1            ;
+; |counter|transform_clk:timer|Add0~147          ; |counter|transform_clk:timer|Add0~147          ; combout          ;
+; |counter|transform_clk:timer|Add0~147          ; |counter|transform_clk:timer|Add0~148          ; cout0            ;
+; |counter|transform_clk:timer|Add0~147          ; |counter|transform_clk:timer|Add0~148COUT1_225 ; cout1            ;
+; |counter|transform_clk:timer|Equal0~7          ; |counter|transform_clk:timer|Equal0~7          ; combout          ;
+; |counter|transform_clk:timer|Add0~149          ; |counter|transform_clk:timer|Add0~149          ; combout          ;
+; |counter|transform_clk:timer|Add0~149          ; |counter|transform_clk:timer|Add0~150          ; cout0            ;
+; |counter|transform_clk:timer|Add0~149          ; |counter|transform_clk:timer|Add0~150COUT1_227 ; cout1            ;
+; |counter|transform_clk:timer|Add0~151          ; |counter|transform_clk:timer|Add0~151          ; combout          ;
+; |counter|transform_clk:timer|Add0~151          ; |counter|transform_clk:timer|Add0~152          ; cout0            ;
+; |counter|transform_clk:timer|Add0~151          ; |counter|transform_clk:timer|Add0~152COUT1_229 ; cout1            ;
+; |counter|transform_clk:timer|Add0~153          ; |counter|transform_clk:timer|Add0~153          ; combout          ;
+; |counter|transform_clk:timer|Add0~153          ; |counter|transform_clk:timer|Add0~154          ; cout             ;
+; |counter|transform_clk:timer|Add0~155          ; |counter|transform_clk:timer|Add0~155          ; combout          ;
+; |counter|transform_clk:timer|Equal0~8          ; |counter|transform_clk:timer|Equal0~8          ; combout          ;
+; |counter|transform_clk:timer|Equal0~9          ; |counter|transform_clk:timer|Equal0~9          ; combout          ;
+; |counter|transform_clk:timer|\main:counter[13] ; |counter|transform_clk:timer|\main:counter[13] ; regout           ;
+; |counter|transform_clk:timer|\main:counter[15] ; |counter|transform_clk:timer|\main:counter[15] ; regout           ;
+; |counter|transform_clk:timer|\main:counter[12] ; |counter|transform_clk:timer|\main:counter[12] ; regout           ;
+; |counter|transform_clk:timer|\main:counter[14] ; |counter|transform_clk:timer|\main:counter[14] ; regout           ;
+; |counter|transform_clk:timer|\main:counter[16] ; |counter|transform_clk:timer|\main:counter[16] ; regout           ;
+; |counter|transform_clk:timer|\main:counter[17] ; |counter|transform_clk:timer|\main:counter[17] ; regout           ;
+; |counter|transform_clk:timer|\main:counter[18] ; |counter|transform_clk:timer|\main:counter[18] ; regout           ;
+; |counter|transform_clk:timer|\main:counter[19] ; |counter|transform_clk:timer|\main:counter[19] ; regout           ;
+; |counter|transform_clk:timer|\main:counter[20] ; |counter|transform_clk:timer|\main:counter[20] ; regout           ;
+; |counter|transform_clk:timer|\main:counter[21] ; |counter|transform_clk:timer|\main:counter[21] ; regout           ;
+; |counter|transform_clk:timer|\main:counter[22] ; |counter|transform_clk:timer|\main:counter[22] ; regout           ;
+; |counter|transform_clk:timer|\main:counter[23] ; |counter|transform_clk:timer|\main:counter[23] ; regout           ;
+; |counter|transform_clk:timer|\main:counter[24] ; |counter|transform_clk:timer|\main:counter[24] ; regout           ;
+; |counter|transform_clk:timer|\main:counter[25] ; |counter|transform_clk:timer|\main:counter[25] ; regout           ;
+; |counter|transform_clk:timer|\main:counter[26] ; |counter|transform_clk:timer|\main:counter[26] ; regout           ;
+; |counter|transform_clk:timer|\main:counter[27] ; |counter|transform_clk:timer|\main:counter[27] ; regout           ;
+; |counter|transform_clk:timer|\main:counter[28] ; |counter|transform_clk:timer|\main:counter[28] ; regout           ;
+; |counter|transform_clk:timer|\main:counter[29] ; |counter|transform_clk:timer|\main:counter[29] ; regout           ;
+; |counter|transform_clk:timer|\main:counter[30] ; |counter|transform_clk:timer|\main:counter[30] ; regout           ;
+; |counter|transform_clk:timer|\main:counter[31] ; |counter|transform_clk:timer|\main:counter[31] ; regout           ;
+; |counter|rst                                   ; |counter|rst~corein                            ; combout          ;
++------------------------------------------------+------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++--------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                           ;
++------------------------------------------------+------------------------------------------------+------------------+
+; Node Name                                      ; Output Port Name                               ; Output Port Type ;
++------------------------------------------------+------------------------------------------------+------------------+
+; |counter|transform_clk:timer|Add0~95           ; |counter|transform_clk:timer|Add0~96           ; cout0            ;
+; |counter|transform_clk:timer|Add0~97           ; |counter|transform_clk:timer|Add0~98           ; cout0            ;
+; |counter|transform_clk:timer|Add0~99           ; |counter|transform_clk:timer|Add0~100          ; cout0            ;
+; |counter|transform_clk:timer|Add0~103          ; |counter|transform_clk:timer|Add0~104          ; cout0            ;
+; |counter|transform_clk:timer|Add0~105          ; |counter|transform_clk:timer|Add0~106COUT1_191 ; cout1            ;
+; |counter|transform_clk:timer|Add0~107          ; |counter|transform_clk:timer|Add0~108COUT1_193 ; cout1            ;
+; |counter|transform_clk:timer|Add0~109          ; |counter|transform_clk:timer|Add0~110COUT1_195 ; cout1            ;
+; |counter|transform_clk:timer|Add0~111          ; |counter|transform_clk:timer|Add0~112COUT1_197 ; cout1            ;
+; |counter|transform_clk:timer|Add0~115          ; |counter|transform_clk:timer|Add0~116          ; cout0            ;
+; |counter|transform_clk:timer|Add0~117          ; |counter|transform_clk:timer|Add0~117          ; combout          ;
+; |counter|transform_clk:timer|Add0~117          ; |counter|transform_clk:timer|Add0~118          ; cout0            ;
+; |counter|transform_clk:timer|Add0~117          ; |counter|transform_clk:timer|Add0~118COUT1_203 ; cout1            ;
+; |counter|transform_clk:timer|Add0~119          ; |counter|transform_clk:timer|Add0~119          ; combout          ;
+; |counter|transform_clk:timer|Add0~119          ; |counter|transform_clk:timer|Add0~120          ; cout             ;
+; |counter|transform_clk:timer|Add0~121          ; |counter|transform_clk:timer|Add0~122          ; cout0            ;
+; |counter|transform_clk:timer|Add0~121          ; |counter|transform_clk:timer|Add0~122COUT1_201 ; cout1            ;
+; |counter|transform_clk:timer|Add0~123          ; |counter|transform_clk:timer|Add0~123          ; combout          ;
+; |counter|transform_clk:timer|Add0~123          ; |counter|transform_clk:timer|Add0~124          ; cout0            ;
+; |counter|transform_clk:timer|Add0~123          ; |counter|transform_clk:timer|Add0~124COUT1_205 ; cout1            ;
+; |counter|transform_clk:timer|Equal0~3          ; |counter|transform_clk:timer|Equal0~3          ; combout          ;
+; |counter|transform_clk:timer|Equal0~4          ; |counter|transform_clk:timer|Equal0~4          ; combout          ;
+; |counter|transform_clk:timer|Add0~125          ; |counter|transform_clk:timer|Add0~125          ; combout          ;
+; |counter|transform_clk:timer|Add0~125          ; |counter|transform_clk:timer|Add0~126          ; cout0            ;
+; |counter|transform_clk:timer|Add0~125          ; |counter|transform_clk:timer|Add0~126COUT1_207 ; cout1            ;
+; |counter|transform_clk:timer|Add0~127          ; |counter|transform_clk:timer|Add0~127          ; combout          ;
+; |counter|transform_clk:timer|Add0~127          ; |counter|transform_clk:timer|Add0~128          ; cout0            ;
+; |counter|transform_clk:timer|Add0~127          ; |counter|transform_clk:timer|Add0~128COUT1_209 ; cout1            ;
+; |counter|transform_clk:timer|Add0~129          ; |counter|transform_clk:timer|Add0~129          ; combout          ;
+; |counter|transform_clk:timer|Add0~129          ; |counter|transform_clk:timer|Add0~130          ; cout0            ;
+; |counter|transform_clk:timer|Add0~129          ; |counter|transform_clk:timer|Add0~130COUT1_211 ; cout1            ;
+; |counter|transform_clk:timer|Add0~131          ; |counter|transform_clk:timer|Add0~131          ; combout          ;
+; |counter|transform_clk:timer|Add0~131          ; |counter|transform_clk:timer|Add0~132          ; cout0            ;
+; |counter|transform_clk:timer|Add0~131          ; |counter|transform_clk:timer|Add0~132COUT1_213 ; cout1            ;
+; |counter|transform_clk:timer|Equal0~5          ; |counter|transform_clk:timer|Equal0~5          ; combout          ;
+; |counter|transform_clk:timer|Add0~133          ; |counter|transform_clk:timer|Add0~133          ; combout          ;
+; |counter|transform_clk:timer|Add0~133          ; |counter|transform_clk:timer|Add0~134          ; cout             ;
+; |counter|transform_clk:timer|Add0~135          ; |counter|transform_clk:timer|Add0~135          ; combout          ;
+; |counter|transform_clk:timer|Add0~135          ; |counter|transform_clk:timer|Add0~136          ; cout0            ;
+; |counter|transform_clk:timer|Add0~135          ; |counter|transform_clk:timer|Add0~136COUT1_215 ; cout1            ;
+; |counter|transform_clk:timer|Add0~137          ; |counter|transform_clk:timer|Add0~137          ; combout          ;
+; |counter|transform_clk:timer|Add0~137          ; |counter|transform_clk:timer|Add0~138          ; cout0            ;
+; |counter|transform_clk:timer|Add0~137          ; |counter|transform_clk:timer|Add0~138COUT1_217 ; cout1            ;
+; |counter|transform_clk:timer|Add0~139          ; |counter|transform_clk:timer|Add0~139          ; combout          ;
+; |counter|transform_clk:timer|Add0~139          ; |counter|transform_clk:timer|Add0~140          ; cout0            ;
+; |counter|transform_clk:timer|Add0~139          ; |counter|transform_clk:timer|Add0~140COUT1_219 ; cout1            ;
+; |counter|transform_clk:timer|Equal0~6          ; |counter|transform_clk:timer|Equal0~6          ; combout          ;
+; |counter|transform_clk:timer|Add0~141          ; |counter|transform_clk:timer|Add0~141          ; combout          ;
+; |counter|transform_clk:timer|Add0~141          ; |counter|transform_clk:timer|Add0~142          ; cout0            ;
+; |counter|transform_clk:timer|Add0~141          ; |counter|transform_clk:timer|Add0~142COUT1_221 ; cout1            ;
+; |counter|transform_clk:timer|Add0~143          ; |counter|transform_clk:timer|Add0~143          ; combout          ;
+; |counter|transform_clk:timer|Add0~143          ; |counter|transform_clk:timer|Add0~144          ; cout             ;
+; |counter|transform_clk:timer|Add0~145          ; |counter|transform_clk:timer|Add0~145          ; combout          ;
+; |counter|transform_clk:timer|Add0~145          ; |counter|transform_clk:timer|Add0~146          ; cout0            ;
+; |counter|transform_clk:timer|Add0~145          ; |counter|transform_clk:timer|Add0~146COUT1_223 ; cout1            ;
+; |counter|transform_clk:timer|Add0~147          ; |counter|transform_clk:timer|Add0~147          ; combout          ;
+; |counter|transform_clk:timer|Add0~147          ; |counter|transform_clk:timer|Add0~148          ; cout0            ;
+; |counter|transform_clk:timer|Add0~147          ; |counter|transform_clk:timer|Add0~148COUT1_225 ; cout1            ;
+; |counter|transform_clk:timer|Equal0~7          ; |counter|transform_clk:timer|Equal0~7          ; combout          ;
+; |counter|transform_clk:timer|Add0~149          ; |counter|transform_clk:timer|Add0~149          ; combout          ;
+; |counter|transform_clk:timer|Add0~149          ; |counter|transform_clk:timer|Add0~150          ; cout0            ;
+; |counter|transform_clk:timer|Add0~149          ; |counter|transform_clk:timer|Add0~150COUT1_227 ; cout1            ;
+; |counter|transform_clk:timer|Add0~151          ; |counter|transform_clk:timer|Add0~151          ; combout          ;
+; |counter|transform_clk:timer|Add0~151          ; |counter|transform_clk:timer|Add0~152          ; cout0            ;
+; |counter|transform_clk:timer|Add0~151          ; |counter|transform_clk:timer|Add0~152COUT1_229 ; cout1            ;
+; |counter|transform_clk:timer|Add0~153          ; |counter|transform_clk:timer|Add0~153          ; combout          ;
+; |counter|transform_clk:timer|Add0~153          ; |counter|transform_clk:timer|Add0~154          ; cout             ;
+; |counter|transform_clk:timer|Add0~155          ; |counter|transform_clk:timer|Add0~155          ; combout          ;
+; |counter|transform_clk:timer|Equal0~8          ; |counter|transform_clk:timer|Equal0~8          ; combout          ;
+; |counter|transform_clk:timer|Equal0~9          ; |counter|transform_clk:timer|Equal0~9          ; combout          ;
+; |counter|transform_clk:timer|\main:counter[11] ; |counter|transform_clk:timer|\main:counter[11] ; regout           ;
+; |counter|transform_clk:timer|\main:counter[13] ; |counter|transform_clk:timer|\main:counter[13] ; regout           ;
+; |counter|transform_clk:timer|\main:counter[15] ; |counter|transform_clk:timer|\main:counter[15] ; regout           ;
+; |counter|transform_clk:timer|\main:counter[12] ; |counter|transform_clk:timer|\main:counter[12] ; regout           ;
+; |counter|transform_clk:timer|\main:counter[14] ; |counter|transform_clk:timer|\main:counter[14] ; regout           ;
+; |counter|transform_clk:timer|\main:counter[16] ; |counter|transform_clk:timer|\main:counter[16] ; regout           ;
+; |counter|transform_clk:timer|\main:counter[17] ; |counter|transform_clk:timer|\main:counter[17] ; regout           ;
+; |counter|transform_clk:timer|\main:counter[18] ; |counter|transform_clk:timer|\main:counter[18] ; regout           ;
+; |counter|transform_clk:timer|\main:counter[19] ; |counter|transform_clk:timer|\main:counter[19] ; regout           ;
+; |counter|transform_clk:timer|\main:counter[20] ; |counter|transform_clk:timer|\main:counter[20] ; regout           ;
+; |counter|transform_clk:timer|\main:counter[21] ; |counter|transform_clk:timer|\main:counter[21] ; regout           ;
+; |counter|transform_clk:timer|\main:counter[22] ; |counter|transform_clk:timer|\main:counter[22] ; regout           ;
+; |counter|transform_clk:timer|\main:counter[23] ; |counter|transform_clk:timer|\main:counter[23] ; regout           ;
+; |counter|transform_clk:timer|\main:counter[24] ; |counter|transform_clk:timer|\main:counter[24] ; regout           ;
+; |counter|transform_clk:timer|\main:counter[25] ; |counter|transform_clk:timer|\main:counter[25] ; regout           ;
+; |counter|transform_clk:timer|\main:counter[26] ; |counter|transform_clk:timer|\main:counter[26] ; regout           ;
+; |counter|transform_clk:timer|\main:counter[27] ; |counter|transform_clk:timer|\main:counter[27] ; regout           ;
+; |counter|transform_clk:timer|\main:counter[28] ; |counter|transform_clk:timer|\main:counter[28] ; regout           ;
+; |counter|transform_clk:timer|\main:counter[29] ; |counter|transform_clk:timer|\main:counter[29] ; regout           ;
+; |counter|transform_clk:timer|\main:counter[30] ; |counter|transform_clk:timer|\main:counter[30] ; regout           ;
+; |counter|transform_clk:timer|\main:counter[31] ; |counter|transform_clk:timer|\main:counter[31] ; regout           ;
+; |counter|rst                                   ; |counter|rst~corein                            ; combout          ;
++------------------------------------------------+------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
+    Info: Processing started: Fri May 10 13:43:19 2019
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off counter -c counter
+Info: Using vector source file "D:/Workplace/EDA_lab/counter/counter.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      45.24 %
+Info: Number of transitions in simulation is 245086
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 169 megabytes
+    Info: Processing ended: Fri May 10 13:43:22 2019
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
+
+

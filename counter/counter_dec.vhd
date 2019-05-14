@@ -1,0 +1,40 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+entity counter_dec is
+    port(
+        clk, rst: in std_logic;
+        val_max: in std_logic_vector(3 downto 0);
+        carry: out std_logic;
+        Q: out std_logic_vector(3 downto 0)
+    );
+end entity counter_dec;
+
+architecture counter_dec_bev of counter_dec is
+    component d_ff
+        port(
+            D, clk, rst: in std_logic;
+            Q, Qn: out std_logic
+        );
+    end component d_ff;
+    signal rst_in: std_logic := '0';
+    signal is_max: std_logic := '0';
+    signal carry_tmp: std_logic := '0';
+    signal Qn: std_logic_vector(3 downto 0) := "1111";
+    signal D: std_logic_vector(3 downto 0);
+begin
+    carry <= carry_tmp;
+    rst_in <= rst or carry_tmp;
+    D(0) <= Qn(0);
+    D(1) <= Qn(0) xor Qn(1);
+    D(2) <= ((not Qn(1)) and (Qn(0) xor Qn(2))) or (Qn(1) and (not Qn(2)));
+    D(3) <= ((not Qn(3)) and Qn(1)) or (Qn(2) and (not (Qn(1) or Qn(3)))) or ((not (Qn(1) or Qn(2))) and (Qn(0) xor Qn(3)));
+    bit_0_ff: d_ff port map(D(0), clk, rst_in, Q(0), Qn(0));
+    bit_1_ff: d_ff port map(D(1), clk, rst_in, Q(1), Qn(1));
+    bit_2_ff: d_ff port map(D(2), clk, rst_in, Q(2), Qn(2));
+    bit_3_ff: d_ff port map(D(3), clk, rst_in, Q(3), Qn(3));
+    is_max <= '1' when Qn = not val_max else '0';
+    carry_ff: d_ff port map(is_max, clk, rst_in, carry_tmp);
+end counter_dec_bev;

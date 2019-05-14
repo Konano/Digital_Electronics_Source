@@ -1,0 +1,5 @@
+Info: Saving your IP search path in C:\Users\NanoApe\.altera.quartus\ip\9.0\ip_search_path\user_components.ipx
+Info: Using factories: CuspFactory, ImportFactory, DSPBuilderFactory, EmbeddedSwTclDriverFactory, DDRLegacyFactory, BeanElementFactory, LegacyFactory, TclModuleFactory, VariationFactory, JarFactory
+Progress: (0) searching D:/Workplace/EDA_lab/light/9.0 (command line switch)
+Info: D:/Workplace/EDA_lab/light/9.0 matched 1 files in 0.00 seconds
+Info: Found 0 components

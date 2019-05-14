@@ -1,0 +1,86 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 24.739 ns
+From           : counter_dec:dec_1|d_ff:bit_0_ff|Q_tmp
+To             : dig_1[5]
+From Clock     : clk_1m
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clk_1m'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 72.75 MHz ( period = 13.746 ns )
+From           : transform_clk:timer|\main:counter[3]
+To             : transform_clk:timer|clk
+From Clock     : clk_1m
+To Clock       : clk_1m
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clk'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 156.69 MHz ( period = 6.382 ns )
+From           : counter_dec:dec_1|d_ff:bit_0_ff|Q_tmp
+To             : counter_dec:dec_1|d_ff:carry_ff|Q_tmp
+From Clock     : clk
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Clock Setup: 'mode'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 156.69 MHz ( period = 6.382 ns )
+From           : counter_dec:dec_1|d_ff:bit_0_ff|Q_tmp
+To             : counter_dec:dec_1|d_ff:carry_ff|Q_tmp
+From Clock     : mode
+To Clock       : mode
+Failed Paths   : 0
+
+Type           : Clock Hold: 'clk_1m'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : counter_dec:dec_1|d_ff:bit_1_ff|Q_tmp
+To             : counter_dec:dec_1|d_ff:carry_ff|Q_tmp
+From Clock     : clk_1m
+To Clock       : clk_1m
+Failed Paths   : 14
+
+Type           : Clock Hold: 'mode'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : counter_dec:dec_1|d_ff:bit_1_ff|Q_tmp
+To             : counter_dec:dec_1|d_ff:carry_ff|Q_tmp
+From Clock     : mode
+To Clock       : mode
+Failed Paths   : 14
+
+Type           : Clock Hold: 'clk'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : counter_dec:dec_1|d_ff:bit_1_ff|Q_tmp
+To             : counter_dec:dec_1|d_ff:carry_ff|Q_tmp
+From Clock     : clk
+To Clock       : clk
+Failed Paths   : 14
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 42
+
+--------------------------------------------------------------------------------------
+
