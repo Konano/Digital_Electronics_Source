@@ -1,68 +1,83 @@
 |counter
-clk => clk_dec_0.DATAB
-rst => counter_dec:dec_1.rst
+clk => debouncer:db.input
 rst => counter_dec:dec_0.rst
+rst => counter_dec:dec_1.rst
 mode => clk_dec_0.OUTPUTSELECT
 clk_1m => transform_clk:timer.clk_in
-dig_0[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
-dig_0[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
-dig_0[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
-dig_0[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
-dig_0[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
-dig_0[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
-dig_0[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
-dig_1[0] <= Mux13.DB_MAX_OUTPUT_PORT_TYPE
-dig_1[1] <= Mux12.DB_MAX_OUTPUT_PORT_TYPE
-dig_1[2] <= Mux11.DB_MAX_OUTPUT_PORT_TYPE
-dig_1[3] <= Mux10.DB_MAX_OUTPUT_PORT_TYPE
-dig_1[4] <= Mux9.DB_MAX_OUTPUT_PORT_TYPE
-dig_1[5] <= Mux8.DB_MAX_OUTPUT_PORT_TYPE
-dig_1[6] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
+clk_1m => debouncer:db.clk
+dig_0[0] << Mux6.DB_MAX_OUTPUT_PORT_TYPE
+dig_0[1] << Mux5.DB_MAX_OUTPUT_PORT_TYPE
+dig_0[2] << Mux4.DB_MAX_OUTPUT_PORT_TYPE
+dig_0[3] << Mux3.DB_MAX_OUTPUT_PORT_TYPE
+dig_0[4] << Mux2.DB_MAX_OUTPUT_PORT_TYPE
+dig_0[5] << Mux1.DB_MAX_OUTPUT_PORT_TYPE
+dig_0[6] << Mux0.DB_MAX_OUTPUT_PORT_TYPE
+dig_1[0] << Mux13.DB_MAX_OUTPUT_PORT_TYPE
+dig_1[1] << Mux12.DB_MAX_OUTPUT_PORT_TYPE
+dig_1[2] << Mux11.DB_MAX_OUTPUT_PORT_TYPE
+dig_1[3] << Mux10.DB_MAX_OUTPUT_PORT_TYPE
+dig_1[4] << Mux9.DB_MAX_OUTPUT_PORT_TYPE
+dig_1[5] << Mux8.DB_MAX_OUTPUT_PORT_TYPE
+dig_1[6] << Mux7.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |counter|transform_clk:timer
-clk_in => \main:counter[31].CLK
-clk_in => \main:counter[30].CLK
-clk_in => \main:counter[29].CLK
-clk_in => \main:counter[28].CLK
-clk_in => \main:counter[27].CLK
-clk_in => \main:counter[26].CLK
-clk_in => \main:counter[25].CLK
-clk_in => \main:counter[24].CLK
-clk_in => \main:counter[23].CLK
-clk_in => \main:counter[22].CLK
-clk_in => \main:counter[21].CLK
-clk_in => \main:counter[20].CLK
-clk_in => \main:counter[19].CLK
-clk_in => \main:counter[18].CLK
-clk_in => \main:counter[17].CLK
-clk_in => \main:counter[16].CLK
-clk_in => \main:counter[15].CLK
-clk_in => \main:counter[14].CLK
-clk_in => \main:counter[13].CLK
-clk_in => \main:counter[12].CLK
-clk_in => \main:counter[11].CLK
-clk_in => \main:counter[10].CLK
-clk_in => \main:counter[9].CLK
-clk_in => \main:counter[8].CLK
-clk_in => \main:counter[7].CLK
-clk_in => \main:counter[6].CLK
-clk_in => \main:counter[5].CLK
-clk_in => \main:counter[4].CLK
-clk_in => \main:counter[3].CLK
-clk_in => \main:counter[2].CLK
-clk_in => \main:counter[1].CLK
-clk_in => \main:counter[0].CLK
 clk_in => clk.CLK
+clk_in => \main:counter[0].CLK
+clk_in => \main:counter[1].CLK
+clk_in => \main:counter[2].CLK
+clk_in => \main:counter[3].CLK
+clk_in => \main:counter[4].CLK
+clk_in => \main:counter[5].CLK
+clk_in => \main:counter[6].CLK
+clk_in => \main:counter[7].CLK
+clk_in => \main:counter[8].CLK
+clk_in => \main:counter[9].CLK
+clk_in => \main:counter[10].CLK
+clk_in => \main:counter[11].CLK
+clk_in => \main:counter[12].CLK
+clk_in => \main:counter[13].CLK
+clk_in => \main:counter[14].CLK
+clk_in => \main:counter[15].CLK
+clk_in => \main:counter[16].CLK
+clk_in => \main:counter[17].CLK
+clk_in => \main:counter[18].CLK
+clk_in => \main:counter[19].CLK
+clk_in => \main:counter[20].CLK
+clk_in => \main:counter[21].CLK
+clk_in => \main:counter[22].CLK
+clk_in => \main:counter[23].CLK
+clk_in => \main:counter[24].CLK
+clk_in => \main:counter[25].CLK
+clk_in => \main:counter[26].CLK
+clk_in => \main:counter[27].CLK
+clk_in => \main:counter[28].CLK
+clk_in => \main:counter[29].CLK
+clk_in => \main:counter[30].CLK
+clk_in => \main:counter[31].CLK
 clk_out <= clk.DB_MAX_OUTPUT_PORT_TYPE
 
 
+|counter|debouncer:db
+clk => output~reg0.CLK
+clk => \main:count[0].CLK
+clk => \main:count[1].CLK
+clk => \main:count[2].CLK
+clk => \main:count[3].CLK
+input => count.OUTPUTSELECT
+input => count.OUTPUTSELECT
+input => count.OUTPUTSELECT
+input => count.OUTPUTSELECT
+input => output.OUTPUTSELECT
+output <= output~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
 |counter|counter_dec:dec_0
-clk => d_ff:carry_ff.clk
-clk => d_ff:bit_3_ff.clk
-clk => d_ff:bit_2_ff.clk
-clk => d_ff:bit_1_ff.clk
 clk => d_ff:bit_0_ff.clk
+clk => d_ff:bit_1_ff.clk
+clk => d_ff:bit_2_ff.clk
+clk => d_ff:bit_3_ff.clk
+clk => d_ff:carry_ff.clk
 rst => rst_in.IN1
 val_max[0] => Equal0.IN3
 val_max[1] => Equal0.IN2
@@ -116,11 +131,11 @@ Qn <= Q_tmp.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |counter|counter_dec:dec_1
-clk => d_ff:carry_ff.clk
-clk => d_ff:bit_3_ff.clk
-clk => d_ff:bit_2_ff.clk
-clk => d_ff:bit_1_ff.clk
 clk => d_ff:bit_0_ff.clk
+clk => d_ff:bit_1_ff.clk
+clk => d_ff:bit_2_ff.clk
+clk => d_ff:bit_3_ff.clk
+clk => d_ff:carry_ff.clk
 rst => rst_in.IN1
 val_max[0] => Equal0.IN3
 val_max[1] => Equal0.IN2

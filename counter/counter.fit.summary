@@ -1,11 +1,11 @@
-Fitter Status : Successful - Fri May 10 14:08:07 2019
-Quartus II Version : 9.0 Build 132 02/25/2009 SJ Full Version
+Fitter Status : Successful - Fri May 17 23:45:20 2019
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : counter
 Top-level Entity Name : counter
 Family : MAX II
 Device : EPM240T100C5
 Timing Models : Final
-Total logic elements : 102 / 240 ( 43 % )
+Total logic elements : 110 / 240 ( 46 % )
 Total pins : 18 / 80 ( 23 % )
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )
